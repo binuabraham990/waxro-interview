@@ -29,13 +29,13 @@ class HomeController extends Controller {
      */
     public function dashboard(Request $request) {
 
-        $data = DB::table('users')
-                ->join('balances', 'users.id', '=', 'balances.user_id')
-                ->select('users.name', 'users.email', 'balances.balance')
-                ->where('users.id', auth()->user()->id)
-                ->first();
-
         if (Auth::check()) {
+            
+            $data = DB::table('users')
+                    ->join('balances', 'users.id', '=', 'balances.user_id')
+                    ->select('users.name', 'users.email', 'balances.balance')
+                    ->where('users.id', auth()->user()->id)
+                    ->first();
             return View::make('home.dashboard', compact('data'));
         }
 

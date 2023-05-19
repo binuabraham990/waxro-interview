@@ -50,6 +50,7 @@
                 </form>
             </div>
         </div>
+        <apsn>Already have an account? <a href="{{ route('login') }}">Sign In</a>
     </div>    
 </div>
 

@@ -35,6 +35,7 @@
                 </form>
             </div>
         </div>
+        <span>Don't have an account yet <a href='{{ route('register') }}'>Signup</a></span>
     </div>    
 </div>
 
