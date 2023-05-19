@@ -1,6 +1,7 @@
 ### Working of the application
 
 - Clone/download and run composer install
+- Import database tables from localhost.sql to the local database.
 - copy .env.example to .env and make database changes
 - php artisan key:generate may be we need to run the key generation also
 - Using mysql and php 8.1
